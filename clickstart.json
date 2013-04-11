@@ -1,0 +1,26 @@
+{
+    "id": "tomcat7-clickstack-demo",
+    "name": "tomcat7-clickstack demo",
+    "source": "git://github.com/CloudBees-community/tomcat7-clickstack-demo.git",
+    "description" : "Demo of Tomcat 7 clickStack",
+    "doc-url" : "https://github.com/CloudBees-community/tomcat7-clickstack-demo/blob/master/README.md",
+    "app-package": "https://repository-cyrille-leclerc.forge.cloudbees.com/snapshot/com/cloudbees/demo/tomcat7-clickstack-demo/1.0-SNAPSHOT/tomcat7-clickstack-demo-1.0-20130411.214053-1.war",
+
+    "supported-by" : "cloudbees",
+    "order" : 1,
+
+    "runtime": {
+        "type": "tomcat7"
+    },
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "my_db"
+        }
+    ],
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven"
+        }
+    }
+}
