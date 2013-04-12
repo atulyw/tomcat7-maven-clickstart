@@ -1,10 +1,15 @@
-# tomcat7-maven-clickstart
+# Welcome to Tomcat7 on CloudBees
 
-Demo of the [tomcat7-clickstack](https://developer.cloudbees.com/bin/view/RUN/Tomcat7).
+This is a "ClickStart" that gets you going with a Maven - Tomcat 7 "seed" project starting point. You can launch it here:
 
-Shows how to:
-* Deploy your application on a `tomcat7-clickstack`
-* Bind a [CloudBees MySQL databases](http://wiki.cloudbees.com/bin/view/RUN/DatabaseGuide) to your application
+<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/tomcat7-maven-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
+
+This will setup a continuous deployment pipeline - a CloudBees Git repository, a Jenkins build compiling and running the test suite (on each commit).
+Should the build succeed, this seed app is deployed on a Tomcat 7 container.
+
+# CloudBees Tomcat 7 container
+
+Tomcat 7 container is available on CloudBees thanks to the [tomcat7-clickstack](https://github.com/CloudBees-community/tomcat7-clickstack). Documentation is available [here](https://developer.cloudbees.com/bin/view/RUN/Tomcat7).
 
 # How to deploy a web application on a Tomcat7 ClickStack
 
@@ -20,14 +25,14 @@ bees app:deploy -a my-account/tomcat7-maven-clickstart -t tomcat7 -Rjava_version
 * "`./target/tomcat7-maven-clickstart-1.0-SNAPSHOT.war`": path to the war file.
 You only need to set the "`-R`", "`-t`" and "`-D`" settings once - they will be remembered for subsequent deploys.
 
-## How to bind a CloudBees MySql database to an application on a Tomcat7 ClickStack
+# How to bind a CloudBees MySql database to an application on a Tomcat7 ClickStack
 
-### Create database if needed
+## Create database if needed
 ```
 db:create --username my-username --password alpha-beta tomcat7-maven-clickstart-db
 ```
 
-### Bind application to database
+## Bind application to database
 
 ```
 bees app:bind -a  tomcat7-maven-clickstart -db tomcat7-maven-clickstart-db -as tomcat7_maven_clickstart_db
@@ -44,7 +49,7 @@ This binding will create the following System Properties:
 
 Details on bindings are available in [Binding services (resources) to applications](https://developer.cloudbees.com/bin/view/RUN/Resource+Management).
 
-### Declare Tomcat JNDI Datasource
+## Declare Tomcat JNDI Datasource
 
 Then, in your war application, declare a standard [Tomcat JNDI DataSource](http://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) a "META-INF/context.xml" file using [Tomcat variable substitution](http://tomcat.apache.org/tomcat-7.0-doc/config/index.html) syntax `${propname}` to inject your binding parameters.
 
@@ -73,6 +78,7 @@ Then, in your war application, declare a standard [Tomcat JNDI DataSource](http:
             />
 </Context>
 ```
+See https://github.com/CloudBees-community/tomcat7-maven-clickstart/blob/master/src/main/webapp/META-INF/context.xml
 
 ### Use the DataSource in you application
 

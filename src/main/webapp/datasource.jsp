@@ -49,6 +49,6 @@ conn.close();
         conn.close();
     %>
 </p>
-Success!
+<strong>Success! Your DataSource works!</strong>
 </body>
 </html>
