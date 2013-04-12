@@ -19,9 +19,9 @@
             auth="Container"
             type="javax.sql.DataSource"
 
-            url="jdbc:${DATABASE_URL_TOMCAT7_CLICKSTACK_DEMO_DB}"
-            username="${DATABASE_USERNAME_TOMCAT7_CLICKSTACK_DEMO_DB}"
-            password="${DATABASE_PASSWORD_TOMCAT7_CLICKSTACK_DEMO_DB}"
+            url="jdbc:${DATABASE_URL_TOMCAT7_MAVEN_CLICKSTART_DB}"
+            username="${DATABASE_USERNAME_TOMCAT7_MAVEN_CLICKSTART_DB}"
+            password="${DATABASE_PASSWORD_TOMCAT7_MAVEN_CLICKSTART_DB}"
 
             driverClassName="com.mysql.jdbc.Driver"
 

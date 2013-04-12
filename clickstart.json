@@ -1,10 +1,10 @@
 {
-    "id": "tomcat7-clickstack-demo",
+    "id": "tomcat7-maven-clickstart",
     "name": "tomcat7-clickstack demo",
-    "source": "git://github.com/CloudBees-community/tomcat7-clickstack-demo.git",
+    "source": "git://github.com/CloudBees-community/tomcat7-maven-clickstart.git",
     "description" : "Demo of Tomcat 7 clickStack",
-    "doc-url" : "https://github.com/CloudBees-community/tomcat7-clickstack-demo/blob/master/README.md",
-    "app-package": "https://repository-cyrille-leclerc.forge.cloudbees.com/snapshot/com/cloudbees/demo/tomcat7-clickstack-demo/1.0-SNAPSHOT/tomcat7-clickstack-demo-1.0-20130411.214053-1.war",
+    "doc-url" : "https://github.com/CloudBees-community/tomcat7-maven-clickstart/blob/master/README.md",
+    "app-package": "https://repository-cyrille-leclerc.forge.cloudbees.com/snapshot/com/cloudbees/demo/tomcat7-maven-clickstart/1.0-SNAPSHOT/tomcat7-maven-clickstart-1.0-20130411.214053-1.war",
 
     "supported-by" : "cloudbees",
     "order" : 1,
@@ -15,7 +15,7 @@
     "databases": [
         {
             "type": "mysql",
-            "alias": "tomcat7_clickstack_demo_db"
+            "alias": "tomcat7_maven_clickstart_db"
         }
     ],
     "build-with-jenkins": {
