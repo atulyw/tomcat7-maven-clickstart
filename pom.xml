@@ -22,10 +22,10 @@
         <version>2</version>
     </parent>
     <groupId>com.cloudbees.demo</groupId>
-    <artifactId>tomcat7-clickstack-demo</artifactId>
+    <artifactId>tomcat7-maven-clickstart</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>tomcat7-clickstack-demo Maven Webapp</name>
+    <name>tomcat7-maven-clickstart Maven Webapp</name>
     <dependencies>
 
         <dependency>
