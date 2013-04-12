@@ -15,7 +15,7 @@
     "databases": [
         {
             "type": "mysql",
-            "alias": "my_db"
+            "alias": "tomcat7_clickstack_demo_db"
         }
     ],
     "build-with-jenkins": {
