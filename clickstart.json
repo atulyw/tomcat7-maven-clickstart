@@ -1,10 +1,10 @@
 {
     "id": "tomcat7-maven-clickstart",
-    "name": "tomcat7-clickstack demo",
+    "name": "tomcat7-clickstart demo",
     "source": "git://github.com/CloudBees-community/tomcat7-maven-clickstart.git",
     "description" : "Demo of Tomcat 7 clickStack",
     "doc-url" : "https://github.com/CloudBees-community/tomcat7-maven-clickstart/blob/master/README.md",
-    "app-package": "https://repository-cyrille-leclerc.forge.cloudbees.com/snapshot/com/cloudbees/demo/tomcat7-maven-clickstart/1.0-SNAPSHOT/tomcat7-maven-clickstart-1.0-20130411.214053-1.war",
+    "app-package": "https://repository-community.forge.cloudbees.com/snapshot/localdomain/localhost/tomcat7-maven-clickstart/1.0-SNAPSHOT/tomcat7-maven-clickstart-1.0-20130412.170139-1.war",
 
     "supported-by" : "cloudbees",
     "order" : 1,
