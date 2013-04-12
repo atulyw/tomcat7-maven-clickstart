@@ -37,9 +37,9 @@ bees app:bind -a  my-account/tomcat7-clickstack-demo -db tomcat7-clickstack-demo
 
 This binding will create the following System Properties:
 
-* `DATABASE_PASSWORD_BEES_TOMCAT7_CLICKSTACK_DEMO_DB`: url of the database starting with "mysql:" (e.g. "mysql://ec2-1.2.3.4.compute-1.amazonaws.com:3306/tomcat7-clickstack-demo-db"). **Please note** that this URL is not prefixed by "jdbc:".
-* `DATABASE_URL_TOMCAT7_CLICKSTACK_DEMO_DB`: login of the database
-* `DATABASE_USERNAME_TOMCAT7_CLICKSTACK_DEMO_DB`: password of the database
+* `DATABASE_URL_TOMCAT7_CLICKSTACK_DEMO_DB`: url of the database starting with "mysql:" (e.g. "mysql://ec2-1.2.3.4.compute-1.amazonaws.com:3306/tomcat7-clickstack-demo-db"). **Please note** that this URL is **not** prefixed by "jdbc:".
+* `DATABASE_USERNAME_TOMCAT7_CLICKSTACK_DEMO_DB`: login of the database
+* `DATABASE_PASSWORD_BEES_TOMCAT7_CLICKSTACK_DEMO_DB`: password of the database
 
 Details on bindings are available in [Binding services (resources) to applications](https://developer.cloudbees.com/bin/view/RUN/Resource+Management).
 
@@ -54,9 +54,9 @@ Then, in your war application, declare a standard [Tomcat JNDI DataSource](http:
             auth="Container"
             type="javax.sql.DataSource"
 
-            url="jdbc:${DATABASE_URL_MY_DB}"
-            username="${DATABASE_USERNAME_MY_DB}"
-            password="${DATABASE_PASSWORD_MY_DB}"
+            url="jdbc:${DATABASE_URL_TOMCAT7_CLICKSTACK_DEMO_DB}"
+            username="${DATABASE_USERNAME_TOMCAT7_CLICKSTACK_DEMO_DB}"
+            password="${DATABASE_PASSWORD_BEES_TOMCAT7_CLICKSTACK_DEMO_DB}"
 
             driverClassName="com.mysql.jdbc.Driver"
 
