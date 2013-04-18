@@ -380,6 +380,9 @@
 <h1>System information</h1>
 <table border="1">
     <tr>
+        <th colspan="2">System Properties</th>
+    </tr>
+    <tr>
         <th>Name</th>
         <th>Value</th>
     </tr>
@@ -393,6 +396,26 @@
             out.println("<tr><td valign='top'>" + propertyName + "</td><td>" + value + "</td></tr>");
         }
     %>
+    <tr>
+        <th colspan="2">Environement Variables</th>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    <%
+        List<String> environmentVariableNames = new ArrayList<String>(System.getenv().keySet());
+        Collections.sort(environmentVariableNames);
+        for (String environmentVariableName : environmentVariableNames) {
+
+            String environmentVariableValue = System.getenv(environmentVariableName);
+            String value = formatValue(environmentVariableName, environmentVariableValue);
+            out.println("<tr><td valign='top'>" + environmentVariableName + "</td><td>" + value + "</td></tr>");
+        }
+    %>
+    <tr>
+        <th colspan="2">Other information</th>
+    </tr>
     <tr>
         <td>Working directory</td>
         <td><%=new java.io.File(".").getAbsolutePath()%>
