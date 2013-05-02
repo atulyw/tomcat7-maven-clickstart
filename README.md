@@ -82,6 +82,8 @@ See https://github.com/CloudBees-community/tomcat7-maven-clickstart/blob/master/
 
 ### Use the DataSource in you application
 
+#### Plain Java
+
 You can now use your "`java:comp/env/jdbc/my-db`" JNDI DataSource in your application.
 Code sample
 
@@ -98,7 +100,21 @@ stmt.close();
 conn.close();
 ```
 
+#### Java Standard Tag Library / JSTL
 
+```jsp
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<sql:query var="rs" dataSource="jdbc/my-db">
+    select 1 as col1
+</sql:query>
+
+<h1>Datasource JSTL Demo</h1>
+
+<c:forEach var="row" items="${rs.rows}">
+Row: ${row.col1}<br/>
+</c:forEach>
+```
 
 
  
