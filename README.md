@@ -53,7 +53,7 @@ Details on bindings are available in [Binding services (resources) to applicatio
 
 Then, in your war application, declare a standard [Tomcat JNDI DataSource](http://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) a "META-INF/context.xml" file using [Tomcat variable substitution](http://tomcat.apache.org/tomcat-7.0-doc/config/index.html) syntax `${propname}` to inject your binding parameters.
 
-```
+```xml
 <Context>
     <Resource
             name="jdbc/my-db"
@@ -85,7 +85,7 @@ See https://github.com/CloudBees-community/tomcat7-maven-clickstart/blob/master/
 You can now use your "`java:comp/env/jdbc/my-db`" JNDI DataSource in your application.
 Code sample
 
-```
+```java
 Context ctx = new InitialContext();
 DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/my-db");
 Connection conn = ds.getConnection();
