@@ -41,11 +41,13 @@ bees app:bind -a  tomcat7-maven-clickstart -db tomcat7-maven-clickstart-db -as m
 * "`-db tomcat7-maven-clickstart-db`": the name of your CloudBees MySQL Database
 * "`-as mydb`": the name of the binding which is used to identify the binding and to compose the name of the environment variables used to describe this binding (always prefer '_' to '-' for bindings because '-' is not supported in linux environment variable names).
 
-This binding will create the following System Properties:
+This binding will create
 
-* `DATABASE_URL_MYDB`: url of the database starting with "mysql:" (e.g. "mysql://ec2-1.2.3.4.compute-1.amazonaws.com:3306/tomcat7-maven-clickstart-db"). **Please note** that this URL is **not** prefixed by "jdbc:".
-* `DATABASE_USERNAME_MYDB`: login of the database
-* `DATABASE_PASSWORD_MYDB`: password of the database
+* A JNDI DataSource with name "`java:comp/env/jdbc/mydb`" (also available at "`jdbc/mydb`")
+* The following System Properties
+  * `DATABASE_URL_MYDB`: url of the database starting with "mysql:" (e.g. "mysql://ec2-1.2.3.4.compute-1.amazonaws.com:3306/tomcat7-maven-clickstart-db"). **Please note** that this URL is **not** prefixed by "jdbc:".
+  * `DATABASE_USERNAME_MYDB`: login of the database
+  * `DATABASE_PASSWORD_MYDB`: password of the database
 
 Details on bindings are available in [Binding services (resources) to applications](https://developer.cloudbees.com/bin/view/RUN/Resource+Management).
 
