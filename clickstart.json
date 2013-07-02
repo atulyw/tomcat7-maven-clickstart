@@ -16,7 +16,7 @@
     "databases": [
         {
             "type": "mysql",
-            "alias": "tomcat7_maven_clickstart_db"
+            "alias": "mydb"
         }
     ],
     "build-with-jenkins": {
