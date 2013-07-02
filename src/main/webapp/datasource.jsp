@@ -19,7 +19,7 @@ DataSource is declared in file <code>${WEBAPP_HOME}/META-INF/context.xml</code>
         <td>
 <pre>
 Context ctx = new InitialContext();
-DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/my-db");
+DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/mydb");
 Connection conn = ds.getConnection();
 ResultSet rst = stmt.executeQuery("select 1");
 while (rst.next()) {
@@ -37,7 +37,7 @@ conn.close();
 <p>
     <%
         Context ctx = new InitialContext();
-        DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/my-db");
+        DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/mydb");
         Connection conn = ds.getConnection();
         Statement stmt = conn.createStatement();
         ResultSet rst = stmt.executeQuery("select 1");
