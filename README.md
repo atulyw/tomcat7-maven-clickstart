@@ -59,7 +59,7 @@ Details on bindings are available in [Binding services (resources) to applicatio
 You can now use your "`java:comp/env/jdbc/mydb`" JNDI DataSource in your application.
 Please note that "`jdbc/mydb`" is also available.
 
-Code sample:
+Java code sample:
 
 ```java
 Context ctx = new InitialContext();
@@ -75,6 +75,8 @@ conn.close();
 ```
 
 #### Java Standard Tag Library / JSTL
+
+JSP / JSTL code sample:
 
 ```jsp
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
