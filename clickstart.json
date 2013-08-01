@@ -6,7 +6,6 @@
     "doc-url" : "https://github.com/CloudBees-community/tomcat7-maven-clickstart/blob/master/README.md",
     "app-package": "http://repository-community.forge.cloudbees.com/snapshot/localdomain/localhost/tomcat7-maven-clickstart/1.0-SNAPSHOT/tomcat7-maven-clickstart-1.0-20130702.140405-14.war",
     "icon" : "https://raw.github.com/CloudBees-community/tomcat7-maven-clickstart/master/icon.png",
-    "disabled" : true,
 
     "supported-by" : "cloudbees",
     "order" : 1,
