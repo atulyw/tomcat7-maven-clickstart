@@ -9,7 +9,6 @@
 <h1>DataSource demo</h1>
 
 <h2>DataSource declaration</h2>
-DataSource is declared in file <code>${WEBAPP_HOME}/META-INF/context.xml</code>
 
 <p/>
 
