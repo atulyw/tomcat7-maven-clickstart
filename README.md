@@ -16,12 +16,11 @@ Tomcat 7 container is available on CloudBees thanks to the [tomcat7-clickstack](
 You can deploy your web application on the tomcat7 clickstack using the [CloudBees SDK](https://developer.cloudbees.com/bin/view/RUN/BeesSDK) "`app:deploy`" command.
 
 ```
-bees app:deploy -a my-account/tomcat7-maven-clickstart -t tomcat7 -Rjava_version=1.7 ./target/tomcat7-maven-clickstart-1.0-SNAPSHOT.war
+bees app:deploy -a myapp -t tomcat7 ./target/tomcat7-maven-clickstart-1.0-SNAPSHOT.war
 ```
 
-* "`-a my-account/tomcat7-maven-clickstart`": name of the CloudBees account and of the application. The application will be accessible on the URL http://tomcat7-maven-clickstart.cyrille-leclerc.cloudbees.net/
+* "`-a myapp`": name of the CloudBees account and of the application. The application will be accessible on the URL http://tomcat7-maven-clickstart.cyrille-leclerc.cloudbees.net/
 * "`-t tomcat7`": identifier of the tomcat7 clickstack
-* "`-Rjava_version=1.7`": **optional** parameter to use the version 7 of the Java runtime (JVM). Tomcat 7 supports both JVM 6, 7 and 8. JVM 7 is the default.
 * "`./target/tomcat7-maven-clickstart-1.0-SNAPSHOT.war`": path to the war file.
 You only need to set the "`-R`", "`-t`" and "`-D`" settings once - they will be remembered for subsequent deploys.
 
@@ -29,16 +28,16 @@ You only need to set the "`-R`", "`-t`" and "`-D`" settings once - they will be 
 
 ## Create database if needed
 ```
-db:create --username my-username --password alpha-beta tomcat7-maven-clickstart-db
+db:create --username my-username --password alpha-beta mydb
 ```
 
 ## Bind application to database
 
 ```
-bees app:bind -a  tomcat7-maven-clickstart -db tomcat7-maven-clickstart-db -as mydb
+bees app:bind -a  myapp -db mydb -as mydb
 ```
-* "`-a  tomcat7-maven-clickstart`": the name of your application
-* "`-db tomcat7-maven-clickstart-db`": the name of your CloudBees MySQL Database
+* "`-a  myapp`": the name of your application
+* "`-db mydb`": the name of your CloudBees MySQL Database
 * "`-as mydb`": the name of the binding which is used to identify the binding and to compose the name of the environment variables used to describe this binding (always prefer '_' to '-' for bindings because '-' is not supported in linux environment variable names).
 
 This binding will create
@@ -50,7 +49,6 @@ This binding will create
   * `DATABASE_PASSWORD_MYDB`: password of the database
 
 Details on bindings are available in [Binding services (resources) to applications](https://developer.cloudbees.com/bin/view/RUN/Resource+Management).
-
 
 ### Use the DataSource in you application
 
