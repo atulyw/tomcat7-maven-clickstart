@@ -22,7 +22,7 @@
     <tr>
         <th>Type</th>
         <th>Algorithm</th>
-        <th>Max Allowed Key Lenght</th>
+        <th>Max Allowed Key Length</th>
     </tr>
     <%
         for (Provider.Service service : provider.getServices()) {
