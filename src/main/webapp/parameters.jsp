@@ -1,6 +1,6 @@
-<%@ page import="java.io.*" %>
-<%@ page import="java.util.*" %>
-<%@ page import="javax.naming.*" %>
+<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.io.StringWriter" %>
 <%!
     String formatValue(String name, Object rawValue) {
         String value;
@@ -39,7 +39,8 @@
 <!-- <%=System.currentTimeMillis()%> -->
 
 <%@page import="java.net.InetAddress" %>
-<%@page import="java.util.Map.Entry" %>
+<%@page import="java.util.*" %>
+<%@ page import="javax.crypto.Cipher" %>
 <HTML>
 <HEAD>
     <TITLE>Servlet's information</TITLE>
@@ -436,6 +437,22 @@
             <%
                 for (InetAddress address : InetAddress.getAllByName(null)) {
                     out.println(address.getHostName() + ", " + address.getCanonicalHostName() + ", " + address.getHostAddress() + "<br/>");
+                }
+            %>
+        </td>
+    </tr>
+    <tr>
+        <td>JCE Unlimited Strength</td>
+        <td>
+            <%
+                try {
+                    out.write(Cipher.getMaxAllowedKeyLength("AES") > 128 ? "true" : "false");
+                } catch (Exception e) {
+                    out.write("<pre>");
+                    PrintWriter printWriter = new PrintWriter(out);
+                    e.printStackTrace(printWriter);
+                    out.write("</pre>");
+                    printWriter.flush();
                 }
             %>
         </td>
