@@ -4,7 +4,7 @@
     "source": "git://github.com/CloudBees-community/tomcat7-maven-clickstart.git",
     "description" : "Deploy your Maven web application on Tomcat 7",
     "doc-url" : "https://github.com/CloudBees-community/tomcat7-maven-clickstart/blob/master/README.md",
-    "app-package": "https://repository-community.forge.cloudbees.com/snapshot/localdomain/localhost/tomcat7-maven-clickstart/1.0-SNAPSHOT/tomcat7-maven-clickstart-1.0-20131108.122658-27.war",
+    "app-package": "http://repository-community.forge.cloudbees.com/snapshot/localdomain/localhost/tomcat7-maven-clickstart/1.0-SNAPSHOT/tomcat7-maven-clickstart-1.0-20131216.094436-28.war",
     "icon" : "https://raw.github.com/CloudBees-community/tomcat7-maven-clickstart/master/icon.png",
 
     "supported-by" : "cloudbees",
