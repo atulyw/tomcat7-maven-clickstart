@@ -18,7 +18,7 @@
     <groupId>localdomain.localhost</groupId>
     <artifactId>tomcat7-maven-clickstart</artifactId>
     <packaging>war</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>tomcat7-maven-clickstart Webapp</name>
     <dependencies>
         <dependency>
@@ -77,11 +77,11 @@
     <distributionManagement>
         <repository>
             <id>community-release</id>
-            <url>https://repository-community.forge.cloudbees.com/release/</url>
+            <url>dav:https://repository-community.forge.cloudbees.com/release/</url>
         </repository>
         <snapshotRepository>
             <id>community-snapshot</id>
-            <url>https://repository-community.forge.cloudbees.com/snapshot/</url>
+            <url>dav:https://repository-community.forge.cloudbees.com/snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 
