@@ -18,7 +18,7 @@
     <groupId>localdomain.localhost</groupId>
     <artifactId>tomcat7-maven-clickstart</artifactId>
     <packaging>war</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <name>tomcat7-maven-clickstart Webapp</name>
     <dependencies>
         <dependency>
@@ -72,7 +72,7 @@
     </build>
     <scm>
         <connection>scm:git:https://github.com/CloudBees-community/tomcat7-maven-clickstart.git</connection>
-      <tag>HEAD</tag>
+      <tag>tomcat7-maven-clickstart-1.0.1</tag>
   </scm>
     <distributionManagement>
         <repository>
