@@ -28,12 +28,13 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.logging.Logger;
 
 /**
  * @author <a href="mailto:cleclerc@cloudbees.com">Cyrille Le Clerc</a>
  */
-@WebServlet(value = "/MyServlet")
+@WebServlet(value = "/MyServlet", loadOnStartup = 1)
 public class MyServlet extends HttpServlet {
     protected final Logger logger = Logger.getLogger(getClass().getName());
     @Resource(name = "jdbc/mydb", lookup = "jdbc/mydb")
@@ -43,7 +44,7 @@ public class MyServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         logger.info("Init");
-        System.out.println(getClass().getName() + ".init");
+        System.out.println("raw stdout call" + new Timestamp(System.currentTimeMillis()) + " - " + getClass().getName() + ".init");
     }
 
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
